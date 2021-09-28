@@ -1,0 +1,254 @@
+:root {
+	--gold: #f29100;
+	--white: #fff;
+	--green: #66bb8c;
+	--blue: #1f589a;
+	--gray: #707070;
+	--darkGray: #4a4f54;
+	--darkGrayLessOpacity: hsla(210, 6%, 31%, 0.8);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+img,
+button {
+	display: block;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+}
+
+.logo {
+	width: 100px;
+	height: auto;
+	cursor: pointer;
+}
+
+.whatsapp_logo {
+	position: fixed;
+	bottom: 2.5rem;
+	right: 2rem;
+	transform: scale(0.85);
+	cursor: pointer;
+}
+
+.whatsapp_logo:active {
+	transform: scale(0.83);
+}
+
+button {
+	border: 0;
+	border-radius: 25px;
+	box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.6);
+	cursor: pointer;
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+.btn-section {
+	width: 275px;
+	padding: 0.85rem 1.5rem;
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: 1rem;
+}
+
+.btn-section:hover {
+	background-color: var(--green);
+}
+
+/* -------------------------------- */
+/* section */
+section {
+	position: relative;
+	padding: 2rem;
+}
+
+.section-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.section-container h1 {
+	font-size: 2rem;
+}
+
+.section-container p {
+	font-size: 1.5rem;
+}
+
+/* for second section */
+.cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+.card {
+	max-width: 370px;
+	width: 100%;
+	padding: 2rem 2.5rem;
+	box-shadow: 0 0 15px -2.5px hsla(0, 0%, 50%, 0.75);
+}
+
+/* for third section */
+.third-section-img {
+	height: auto;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.third-section-container {
+	gap: 2rem;
+}
+
+/* for fourth section */
+.fourth-section {
+	width: 100%;
+	height: 100vh;
+	background-image: url("./images/biker_with_rider.png");
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.fourth-section-container {
+	gap: 2rem;
+	width: 100%;
+	max-width: 400px;
+}
+
+.fourth-section-container p,
+.fourth-section-container h1 {
+	color: var(--white);
+}
+
+/* for last section container */
+.last-section-container {
+	gap: 4rem;
+}
+
+.section-row p {
+	opacity: 0.6;
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+
+.signup-rider,
+.signup-business {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.signup-rider:hover,
+.signup-business:hover {
+	color: var(--green);
+}
+
+.signup-rider:active,
+.signup-business:active {
+	transform: scale(0.98);
+}
+
+/* -------------------------------- */
+/* footer */
+footer {
+	color: var(--white);
+}
+
+footer ul li a,
+.footer-col:nth-child(2) p,
+.footer-col:nth-child(3) p {
+	opacity: 0.6;
+}
+
+.footer-col {
+	padding: 2.5rem 2rem;
+	background-color: var(--darkGrayLessOpacity);
+}
+
+.footer-col:nth-child(2),
+.footer-col:nth-child(3) {
+	background-color: var(--darkGray);
+}
+
+.footer-col:nth-child(2) {
+	padding: 1rem 2rem;
+}
+
+.footer-row > div {
+	margin: 1.85rem 0;
+}
+
+.footer-row:last-child > div,
+.downloadApp:last-child {
+	margin: 0rem 0;
+}
+
+.footer-row > div > h3 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.footer-row > div > h3 {
+	margin: 1.5rem 0;
+}
+
+.footer-row > div > ul li,
+.downloadApp {
+	margin: 1rem 0;
+}
+
+.footer-col:nth-child(3) > div > ul li:hover,
+.footer-row > div > ul li a:hover {
+	text-decoration: underline;
+}
+
+.downloadApp {
+	cursor: pointer;
+}
+
+.footer-col:nth-child(2) {
+	border-bottom: 2px solid white;
+}
+
+.footer-col:nth-child(3) {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.footer-col:nth-child(3) > div > ul li:nth-child(1),
+.footer-col:nth-child(3) > div:nth-child(2) > p {
+	margin-bottom: 1rem;
+}
+
+.socials {
+	display: flex;
+	gap: 2rem;
+}
+
+.socials li img {
+	cursor: pointer;
+}

@@ -1,4 +1,18 @@
 /* section */
+@media (min-width: 500px) {
+	/* second section */
+	.green-bg {
+		transform: translate(75%, 0%);
+	}
+}
+
+@media (min-width: 600px) {
+	/* second section */
+	.gold-bg {
+		transform: translate(-70%, -30%);
+	}
+}
+
 @media (min-width: 785px) {
 	section {
 		padding: 5rem;
@@ -9,10 +23,45 @@
 		flex-direction: row;
 	}
 
-	.third-section-img {
-		margin-bottom: 0rem;
+	/* first section */
+	.first-section {
+		padding: 2.5rem 5rem 8rem 5rem;
 	}
 
+	.first-section-container {
+		flex-direction: column;
+	}
+
+	.first-section-container > .section-row > h1 {
+		font-size: 3.375rem;
+		max-width: 550px;
+	}
+
+	.first-section-container > .section-row > p {
+		font-size: 2rem;
+	}
+
+	/* second section */
+	.second-section {
+		padding: 2.5rem 5rem 2.5rem 5rem;
+	}
+	.second-section-container {
+		flex-direction: column;
+	}
+	.cards {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* second section */
+	.second-section-container > h1 {
+		max-width: 550px;
+		font-size: 3.375rem;
+	}
+
+	/* third section */
 	.third-section-container,
 	.fourth-section-container {
 		flex-direction: column;
@@ -50,13 +99,44 @@
 }
 
 @media (min-width: 1075px) {
-	.third-section {
+	/* first section */
+	/* .green-bg {
+		transform: translate(70%, -20%);
+	} */
+	.green-bg {
+		transform: translate(70%, -35%);
+	}
+
+	.first-section-container {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.first-section-container > .section-row {
+		flex: 1;
+	}
+
+	.first-section-container > .section-row:nth-child(2) {
+		display: flex;
+		justify-content: center;
+	}
+
+	/* second section */
+	.second-section {
+		padding: 2.5rem 5rem 5rem 5rem;
+	}
+
+	/* third section */
+	.third-section-img {
+		margin-bottom: 0rem;
+	}
+	/* .third-section {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-	}
-
+	} */
 	.third-section-img {
 		position: absolute;
 		right: 0;
@@ -64,6 +144,7 @@
 		bottom: 5rem;
 		height: calc(100% - 5rem);
 		width: auto;
+		max-width: none;
 	}
 }
 

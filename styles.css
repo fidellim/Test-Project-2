@@ -87,7 +87,6 @@ main {
 	gap: 2rem;
 	padding: 2rem;
 	position: relative;
-	/* min-height: 100vh; */
 	width: 100%;
 	mix-blend-mode: overlay;
 	color: white;
@@ -123,40 +122,35 @@ main {
 }
 
 .hero > .section-row p {
+	width: 100%;
+	max-width: 400px;
 	font-size: 1.5rem;
 	opacity: 1;
 	margin-bottom: 0rem;
+}
+
+.hero > .section-row > .btn-section {
+	width: 230px;
 }
 
 .slider-container {
 	position: relative;
 	height: 400px;
 	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .slide {
 	/* width: 100%;
 	height: 400px; */
 	width: 100%;
+	max-width: 550px;
 	height: 100%;
 	opacity: 0;
-	object-position: center;
+	object-position: top;
 	object-fit: cover;
 }
-
-/* 
-.slide {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
-	width: auto;
-	height: 100vh;
-	object-position: center;
-	object-fit: cover;
-	opacity: 0;
-	transition: 0.5s ease;
-} */
 
 .slide.active {
 	opacity: 1;
@@ -180,17 +174,34 @@ main {
 	right: 0;
 	transform: translate(100%, -100%);
 	animation: heroGreen 1.5s ease-out 0s 1 forwards;
+	-webkit-animation: heroGreen 1.5s ease-out 0s 1 forwards;
 }
 
 @keyframes heroGold {
 	to {
 		transform: translate(200%, 0%);
+		opacity: 0;
 	}
 }
 
 @keyframes heroGreen {
 	to {
 		transform: translate(-200%, -100%);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes heroGold {
+	to {
+		-webkit-transform: translate(200%, 0%);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes heroGreen {
+	to {
+		-webkit-transform: translate(-200%, -100%);
+		opacity: 0;
 	}
 }
 

@@ -7,6 +7,10 @@ Technologies Used
 3. JS
 ```
 
+## Resources
+
+- [Blend Modes](https://alligator.io/css/exploring-blend-modes/) - Learn how to use blend modes in CSS.
+
 ## Author
 
 - Website - [Fidel Lim Portfolio](https://fidellim-portfolio.netlify.app/)

@@ -42,7 +42,7 @@ body {
 
 .whatsapp_logo {
 	position: fixed;
-	bottom: 2.5rem;
+	bottom: 2rem;
 	right: 2rem;
 	transform: scale(0.85);
 	cursor: pointer;
@@ -74,6 +74,149 @@ button:active {
 .btn-section:hover {
 	background-color: var(--green);
 }
+
+/* main */
+main {
+	position: relative;
+	min-height: 100vh;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 2rem;
+	position: relative;
+	/* min-height: 100vh; */
+	width: 100%;
+	mix-blend-mode: overlay;
+	color: white;
+	background-image: url("./images/main_bg_2.png"),
+		linear-gradient(
+			0deg,
+			rgba(31, 88, 154, 1) 0%,
+			rgba(31, 88, 154, 0.46) 32%,
+			rgba(31, 88, 154, 0.45) 69%,
+			rgba(31, 88, 154, 0.13) 100%
+		);
+	background-size: cover;
+	overflow: hidden;
+}
+
+.hero-heading-green {
+	color: var(--green);
+	opacity: 0;
+}
+
+.hero-heading-green.active {
+	opacity: 1;
+}
+
+.hero > .section-row {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.hero > .section-row h1 {
+	font-size: 2rem;
+}
+
+.hero > .section-row p {
+	font-size: 1.5rem;
+	opacity: 1;
+	margin-bottom: 0rem;
+}
+
+.slider-container {
+	position: relative;
+	height: 400px;
+	width: 100%;
+}
+
+.slide {
+	/* width: 100%;
+	height: 400px; */
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	object-position: center;
+	object-fit: cover;
+}
+
+/* 
+.slide {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: auto;
+	height: 100vh;
+	object-position: center;
+	object-fit: cover;
+	opacity: 0;
+	transition: 0.5s ease;
+} */
+
+.slide.active {
+	opacity: 1;
+}
+
+.hero-gold-bg,
+.hero-green-bg {
+	position: absolute;
+	/* height: 15rem; */
+	height: 5rem;
+	top: 50%;
+}
+
+.hero-gold-bg {
+	left: 0;
+	transform: translate(-100%, 0%);
+	animation: heroGold 1.5s ease-out 0s 1 forwards;
+}
+
+.hero-green-bg {
+	right: 0;
+	transform: translate(100%, -100%);
+	animation: heroGreen 1.5s ease-out 0s 1 forwards;
+}
+
+@keyframes heroGold {
+	to {
+		transform: translate(200%, 0%);
+	}
+}
+
+@keyframes heroGreen {
+	to {
+		transform: translate(-200%, -100%);
+	}
+}
+
+/* .hero-gold-bg {
+	left: 0;
+	transform: translate(0, 0%);
+	animation: heroGold 3s ease-out 0s 1 forwards;
+}
+
+.hero-green-bg {
+	right: 0;
+	transform: translate(0, -100%);
+	animation: heroGreen 3s ease-out 0s 1 forwards;
+}
+
+@keyframes heroGold {
+	to {
+		transform: translate(200%, 0%);
+	}
+}
+
+@keyframes heroGreen {
+	to {
+		transform: translate(-200%, -100%);
+	}
+} */
 
 /* -------------------------------- */
 /* section */

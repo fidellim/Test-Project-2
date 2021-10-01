@@ -161,7 +161,6 @@ main {
 .hero-gold-bg,
 .hero-green-bg {
 	position: absolute;
-	/* height: 15rem; */
 	height: 5rem;
 	top: 50%;
 }

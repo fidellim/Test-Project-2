@@ -16,17 +16,17 @@ const slideImages = [
 	"./images/hero/hero_4.png",
 ];
 
-const setActiveSlide = () => {
+const setActiveSlide = (num) => {
 	setTimeout(() => {
 		slide.classList.remove("active");
 		heroHeading.classList.remove("active");
 	}, 0);
 
 	setTimeout(() => {
-		slide.src = slideImages[activeSlide];
+		slide.src = slideImages[num];
 		slide.style.transition = "1s ease";
 		slide.classList.add("active");
-		heroHeading.innerHTML = heroHeadingTexts[activeSlide];
+		heroHeading.innerHTML = heroHeadingTexts[num];
 		heroHeading.style.transition = "1s ease";
 		heroHeading.classList.add("active");
 		createHeroGold();
@@ -41,7 +41,7 @@ const moveSlide = () => {
 		activeSlide++;
 	}
 
-	setActiveSlide();
+	setActiveSlide(activeSlide);
 };
 
 const createHeroGold = () => {

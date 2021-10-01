@@ -167,22 +167,22 @@ main {
 
 .hero-gold-bg {
 	left: 0;
-	/* animation: heroGold 1.5s ease-out forwards;
-	-webkit-animation: heroGold 1.5s ease-out forwards; */
-	animation-name: heroGold;
+	animation: heroGold 1.5s ease-out forwards;
+	-webkit-animation: heroGold 1.5s ease-out forwards;
+	/* animation-name: heroGold;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 	-webkit-animation-name: heroGold;
 	-webkit-animation-duration: 1.5s;
 	-webkit-animation-timing-function: ease-out;
-	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards; */
 }
 
 .hero-green-bg {
 	right: 0;
-	animation: heroGreen 1.5s ease-out 0s 1 forwards;
-	-webkit-animation: heroGreen 1.5s ease-out 0s 1 forwards;
+	animation: heroGreen 1.5s ease-out forwards;
+	-webkit-animation: heroGreen 1.5s ease-out forwards;
 }
 
 @keyframes heroGold {

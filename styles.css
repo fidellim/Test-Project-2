@@ -180,6 +180,10 @@ main {
 }
 
 @keyframes heroGold {
+	from {
+		opacity: 1;
+		transform: translate(-100%, 0%);
+	}
 	to {
 		transform: translate(200%, 0%);
 		opacity: 0;
@@ -187,6 +191,10 @@ main {
 }
 
 @keyframes heroGreen {
+	from {
+		transform: translate(100%, -100%);
+		opacity: 1;
+	}
 	to {
 		transform: translate(-200%, -100%);
 		opacity: 0;
@@ -194,6 +202,10 @@ main {
 }
 
 @-webkit-keyframes heroGold {
+	from {
+		opacity: 1;
+		-webkit-transform: translate(-100%, 0%);
+	}
 	to {
 		-webkit-transform: translate(200%, 0%);
 		opacity: 0;
@@ -201,6 +213,10 @@ main {
 }
 
 @-webkit-keyframes heroGreen {
+	from {
+		-webkit-transform: translate(100%, -100%);
+		opacity: 1;
+	}
 	to {
 		-webkit-transform: translate(-200%, -100%);
 		opacity: 0;

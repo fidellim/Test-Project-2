@@ -90,6 +90,9 @@ main {
 	width: 100%;
 	mix-blend-mode: overlay;
 	color: white;
+
+	/* use this if second bg-image not working */
+	background-image: url("./images/main_bg_2.png");
 	background-image: url("./images/main_bg_2.png"),
 		linear-gradient(
 			0deg,

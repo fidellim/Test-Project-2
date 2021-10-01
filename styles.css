@@ -170,6 +170,7 @@ main {
 	left: 0;
 	transform: translate(-100%, 0%);
 	animation: heroGold 1.5s ease-out 0s 1 forwards;
+	-webkit-animation: heroGold 1.5s ease-out 0s 1 forwards;
 }
 
 .hero-green-bg {

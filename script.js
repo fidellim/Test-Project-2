@@ -103,7 +103,7 @@ setTimeout(() => {
 
 	// change hero section data every 3.5 secs
 	setInterval(moveSlide, 3500);
-}, 6100);
+}, 6000);
 
 // add transition after 1 sec after rendering in the beginning
 setTimeout(() => {

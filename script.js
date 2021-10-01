@@ -1,4 +1,11 @@
-// const slides = document.querySelectorAll(".slide");
+// preloader
+const preloader = document.querySelector(".preloader");
+const preloaderImg = document.querySelector(".preloader-img");
+const progressBar = document.querySelector(".progress-bar");
+const progress = document.querySelector(".progress");
+
+// content
+const container = document.querySelector(".container");
 const slide = document.querySelector(".slide");
 const heroHeading = document.querySelector(".hero-heading-green");
 const heroGold = document.querySelector(".hero-gold-bg");
@@ -68,14 +75,31 @@ const removeHeroBg = (el) => {
 	}, 2000);
 };
 
-// add opacity 1 to hero section data
-slide.classList.add("active");
-heroHeading.classList.add("active");
+setTimeout(() => {
+	progressBar.style.opacity = "1";
+	progress.style.opacity = "1";
+	preloaderImg.style.opacity = "1";
+}, 1800);
+
+setTimeout(() => {
+	// main.style.isolation = "isolate";
+	preloader.style.opacity = "0";
+	// container.style.display = "block";
+
+	// preloader.remove();
+}, 6000);
+
+setTimeout(() => {
+	container.style.display = "block";
+	// add opacity 1 to hero section data
+	slide.classList.add("active");
+	heroHeading.classList.add("active");
+	// change hero section data every 3.5 secs
+	setInterval(moveSlide, 3500);
+}, 6100);
+
 // add transition after 1 sec after rendering in the beginning
 setTimeout(() => {
 	slide.style.transition = "1s ease";
 	heroHeading.style.transition = "1s ease";
-}, 1000);
-
-// change hero section data every 3.5 secs
-setInterval(moveSlide, 3500);
+}, 7100);

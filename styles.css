@@ -75,6 +75,107 @@ button:active {
 	background-color: var(--green);
 }
 
+/* preloader */
+.preloader {
+	position: absolute;
+	/* inset: 0; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background-color: white;
+	/* background-color: var(--blue); */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+	overflow: hidden;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.preloader-circle {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background-color: var(--blue);
+	border-radius: 50%;
+	width: 20rem;
+	height: 20rem;
+	opacity: 0;
+	transform: scale(1) translate(-50%, -50%);
+	animation: preloaderCircle 1s ease-out 0.25s forwards;
+}
+
+@keyframes preloaderCircle {
+	from {
+		opacity: 0;
+		transform: scale(1) translate(-50%, -50%);
+	}
+	to {
+		opacity: 1;
+		transform: scale(10) translate(0%, 0%);
+	}
+}
+
+.preloader-img {
+	width: 100%;
+	max-width: 12.5rem;
+	height: auto;
+	opacity: 0;
+	z-index: 1;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.progress-bar {
+	width: 100%;
+	max-width: 20rem;
+	height: 0.5rem;
+	border-radius: 12px;
+	background-color: white;
+	overflow: hidden;
+	opacity: 0;
+	z-index: 1;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.progress {
+	width: 0%;
+	height: 100%;
+	background-color: var(--green);
+	opacity: 0;
+	z-index: 1;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	animation: progress 3s ease-out 1.8s forwards;
+}
+
+@keyframes progress {
+	0% {
+		width: 0%;
+	}
+	25% {
+		width: 50%;
+	}
+	50% {
+		width: 75%;
+	}
+	75% {
+		width: 85%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+/* container */
+.container {
+	display: none;
+}
+
 /* main */
 main {
 	position: relative;

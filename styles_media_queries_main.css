@@ -1,5 +1,10 @@
 /* footer */
 @media (min-width: 600px) {
+	/* preloader */
+	.progress-bar {
+		max-width: 30rem;
+	}
+
 	/* hero */
 	.hero > .section-row h1 {
 		font-size: 3.375rem;
@@ -62,5 +67,12 @@
 	.slide {
 		min-height: 100vh;
 		max-width: auto;
+	}
+}
+
+@media (min-width: 1640px) {
+	.preloader-circle {
+		width: 25rem;
+		height: 25rem;
 	}
 }

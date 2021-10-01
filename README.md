@@ -9,7 +9,8 @@ Technologies Used
 
 ## Resources
 
-- [Blend Modes](https://alligator.io/css/exploring-blend-modes/) - Learn how to use blend modes in CSS.
+- [Mix Blend Modes](https://alligator.io/css/exploring-blend-modes/) - Learn how to use blend modes in CSS.
+- [Mix blend mode in safari](https://stackoverflow.com/questions/50628725/how-to-fix-safari-mix-blend-mode-color-dodge-bug) - Fix issue on why mix-blend mode doesn't work in safari.
 
 ## Author
 

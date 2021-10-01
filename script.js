@@ -4,6 +4,11 @@ const preloaderImg = document.querySelector(".preloader-img");
 const progressBar = document.querySelector(".progress-bar");
 const progress = document.querySelector(".progress");
 
+// header
+const nav = document.querySelector("nav");
+const navList = document.querySelector(".nav-list");
+const hamburger = document.querySelector(".hamburger");
+
 // content
 const container = document.querySelector(".container");
 const slide = document.querySelector(".slide");
@@ -84,29 +89,49 @@ const removeHeroBg = (el) => {
 	}, 2000);
 };
 
-setTimeout(() => {
-	progressBar.style.opacity = "1";
-	progress.style.opacity = "1";
-	preloaderImg.style.opacity = "1";
-}, 1800);
+//----------------------------------------
+// delete later
+preloader.style.opacity = "0";
+container.style.display = "block";
 
-setTimeout(() => {
-	preloader.style.opacity = "0";
-}, 6000);
+// add opacity 1 to hero section data
+slide.classList.add("active");
+heroHeading.classList.add("active");
 
-setTimeout(() => {
-	container.style.display = "block";
+hamburger.addEventListener("click", () => {
+	nav.classList.toggle("cross");
+	navList.classList.toggle("display");
+});
 
-	// add opacity 1 to hero section data
-	slide.classList.add("active");
-	heroHeading.classList.add("active");
+// change hero section data every 3.5 secs
+// setInterval(moveSlide, 3500);
 
-	// change hero section data every 3.5 secs
-	setInterval(moveSlide, 3500);
-}, 6000);
+//----------------------------------------
+// uncomment later
 
-// add transition after 1 sec after rendering in the beginning
-setTimeout(() => {
-	slide.style.transition = "1s ease";
-	heroHeading.style.transition = "1s ease";
-}, 7100);
+// setTimeout(() => {
+// 	progressBar.style.opacity = "1";
+// 	progress.style.opacity = "1";
+// 	preloaderImg.style.opacity = "1";
+// }, 1800);
+
+// setTimeout(() => {
+// 	preloader.style.opacity = "0";
+// }, 6000);
+
+// setTimeout(() => {
+// 	container.style.display = "block";
+
+// 	// add opacity 1 to hero section data
+// 	slide.classList.add("active");
+// 	heroHeading.classList.add("active");
+
+// 	// change hero section data every 3.5 secs
+// 	setInterval(moveSlide, 3500);
+// }, 6000);
+
+// // add transition after 1 sec after rendering in the beginning
+// setTimeout(() => {
+// 	slide.style.transition = "1s ease";
+// 	heroHeading.style.transition = "1s ease";
+// }, 7100);

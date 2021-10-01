@@ -32,9 +32,18 @@ const setActiveSlide = (num) => {
 	setTimeout(() => {
 		slide.src = slideImages[num];
 		slide.style.transition = "1s ease";
-		slide.classList.add("active");
+		// slide.classList.add("active");
 		heroHeading.innerHTML = heroHeadingTexts[num];
 		heroHeading.style.transition = "1s ease";
+		// heroHeading.classList.add("active");
+	}, 800);
+
+	setTimeout(() => {
+		// slide.src = slideImages[num];
+		// slide.style.transition = "1s ease";
+		slide.classList.add("active");
+		// heroHeading.innerHTML = heroHeadingTexts[num];
+		// heroHeading.style.transition = "1s ease";
 		heroHeading.classList.add("active");
 		createHeroGold();
 		createHeroGreen();
@@ -72,7 +81,7 @@ const createHeroGreen = () => {
 const removeHeroBg = (el) => {
 	setTimeout(() => {
 		el.remove();
-	}, 5000);
+	}, 2000);
 };
 
 setTimeout(() => {

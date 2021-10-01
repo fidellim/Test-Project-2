@@ -72,7 +72,7 @@ const createHeroGreen = () => {
 const removeHeroBg = (el) => {
 	setTimeout(() => {
 		el.remove();
-	}, 2000);
+	}, 5000);
 };
 
 setTimeout(() => {
@@ -82,18 +82,16 @@ setTimeout(() => {
 }, 1800);
 
 setTimeout(() => {
-	// main.style.isolation = "isolate";
 	preloader.style.opacity = "0";
-	// container.style.display = "block";
-
-	// preloader.remove();
 }, 6000);
 
 setTimeout(() => {
 	container.style.display = "block";
+
 	// add opacity 1 to hero section data
 	slide.classList.add("active");
 	heroHeading.classList.add("active");
+
 	// change hero section data every 3.5 secs
 	setInterval(moveSlide, 3500);
 }, 6100);

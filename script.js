@@ -1,3 +1,6 @@
+// -------------------------------------------------------
+// variables
+
 // preloader
 const preloader = document.querySelector(".preloader");
 const preloaderImg = document.querySelector(".preloader-img");
@@ -5,9 +8,15 @@ const progressBar = document.querySelector(".progress-bar");
 const progress = document.querySelector(".progress");
 
 // header
+const header = document.querySelector("header");
+const headerLogo = document.querySelector(".header-logo");
 const nav = document.querySelector("nav");
 const navList = document.querySelector(".nav-list");
 const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelectorAll(".nav-link");
+
+// main
+const hero = document.querySelector(".hero");
 
 // content
 const container = document.querySelector(".container");
@@ -28,6 +37,36 @@ const slideImages = [
 	"./images/hero/hero_4.png",
 ];
 
+// -------------------------------------------------------
+// functions
+
+// nav changes color when scrolled at specific height
+window.onscroll = function () {
+	scrollFunction();
+};
+
+const scrollFunction = () => {
+	if (
+		document.body.scrollTop > header.clientHeight ||
+		document.documentElement.scrollTop > header.clientHeight
+	) {
+		headerLogo.src = "./images/colored_logo.png";
+		header.classList.add("scrolled");
+	} else {
+		headerLogo.src = "./images/logo.png";
+		header.classList.remove("scrolled");
+	}
+};
+
+// close nav bar once a link is pressed
+navLinks.forEach((navLink) => {
+	navLink.addEventListener("click", () => {
+		nav.classList.toggle("cross");
+		navList.classList.toggle("display");
+	});
+});
+
+// change hero bg gold & green, image, and text from hero
 const setActiveSlide = (num) => {
 	setTimeout(() => {
 		slide.classList.remove("active");
@@ -37,24 +76,19 @@ const setActiveSlide = (num) => {
 	setTimeout(() => {
 		slide.src = slideImages[num];
 		slide.style.transition = "1s ease";
-		// slide.classList.add("active");
 		heroHeading.innerHTML = heroHeadingTexts[num];
 		heroHeading.style.transition = "1s ease";
-		// heroHeading.classList.add("active");
 	}, 800);
 
 	setTimeout(() => {
-		// slide.src = slideImages[num];
-		// slide.style.transition = "1s ease";
 		slide.classList.add("active");
-		// heroHeading.innerHTML = heroHeadingTexts[num];
-		// heroHeading.style.transition = "1s ease";
 		heroHeading.classList.add("active");
 		createHeroGold();
 		createHeroGreen();
 	}, 1000);
 };
 
+// change hero bg gold & green, image, and text from hero
 const moveSlide = () => {
 	if (activeSlide === slideImages.length - 1) {
 		activeSlide = 0;
@@ -65,6 +99,7 @@ const moveSlide = () => {
 	setActiveSlide(activeSlide);
 };
 
+// create hero bg gold & green w/ animation
 const createHeroGold = () => {
 	const tag = document.createElement("img");
 	tag.src = "./images/gold_bg.png";
@@ -83,55 +118,40 @@ const createHeroGreen = () => {
 	removeHeroBg(tag);
 };
 
+// remove element after two seconds
 const removeHeroBg = (el) => {
 	setTimeout(() => {
 		el.remove();
 	}, 2000);
 };
 
-//----------------------------------------
-// delete later
-preloader.style.opacity = "0";
-container.style.display = "block";
+// -------------------------------------------------------
+// display preloader logo and progressbar after 1.8 secs
+setTimeout(() => {
+	progressBar.style.opacity = "1";
+	progress.style.opacity = "1";
+	preloaderImg.style.opacity = "1";
+}, 1800);
 
-// add opacity 1 to hero section data
-slide.classList.add("active");
-heroHeading.classList.add("active");
+// remove preloader after 6 secs
+setTimeout(() => {
+	preloader.style.opacity = "0";
+}, 6000);
 
-hamburger.addEventListener("click", () => {
-	nav.classList.toggle("cross");
-	navList.classList.toggle("display");
-});
+// show main content after 6 secs
+setTimeout(() => {
+	container.style.display = "block";
 
-// change hero section data every 3.5 secs
-// setInterval(moveSlide, 3500);
+	// add opacity 1 to hero section data
+	slide.classList.add("active");
+	heroHeading.classList.add("active");
 
-//----------------------------------------
-// uncomment later
+	// change hero section data every 3.5 secs
+	setInterval(moveSlide, 3500);
+}, 6000);
 
-// setTimeout(() => {
-// 	progressBar.style.opacity = "1";
-// 	progress.style.opacity = "1";
-// 	preloaderImg.style.opacity = "1";
-// }, 1800);
-
-// setTimeout(() => {
-// 	preloader.style.opacity = "0";
-// }, 6000);
-
-// setTimeout(() => {
-// 	container.style.display = "block";
-
-// 	// add opacity 1 to hero section data
-// 	slide.classList.add("active");
-// 	heroHeading.classList.add("active");
-
-// 	// change hero section data every 3.5 secs
-// 	setInterval(moveSlide, 3500);
-// }, 6000);
-
-// // add transition after 1 sec after rendering in the beginning
-// setTimeout(() => {
-// 	slide.style.transition = "1s ease";
-// 	heroHeading.style.transition = "1s ease";
-// }, 7100);
+// add transition after 7 secs after rendering in the beginning
+setTimeout(() => {
+	slide.style.transition = "1s ease";
+	heroHeading.style.transition = "1s ease";
+}, 7100);

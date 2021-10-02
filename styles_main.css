@@ -108,6 +108,8 @@ header {
 	padding: 0rem 2rem;
 	position: fixed;
 	z-index: 10;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
 }
 
 header.scrolled {
@@ -120,13 +122,12 @@ header.scrolled {
 	top: 8rem;
 	left: 0rem;
 	right: 0rem;
-	overflow: scroll;
 	height: calc(100vh - 8rem);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 0rem 2rem;
+	overflow-y: scroll;
 	border: 7px solid var(--green);
 	opacity: 0;
 	background-color: white;

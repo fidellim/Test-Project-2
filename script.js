@@ -58,6 +58,12 @@ const scrollFunction = () => {
 	}
 };
 
+// hamburger onclick
+hamburger.addEventListener("click", () => {
+	nav.classList.toggle("cross");
+	navList.classList.toggle("display");
+});
+
 // close nav bar once a link is pressed
 navLinks.forEach((navLink) => {
 	navLink.addEventListener("click", () => {

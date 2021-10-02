@@ -274,14 +274,30 @@ main {
 
 .hero-gold-bg {
 	left: 0;
-	animation: heroGold 1.5s ease-out forwards;
-	-webkit-animation: heroGold 1.5s ease-out forwards;
+	/* animation: heroGold 1.5s ease-out forwards;
+	-webkit-animation: heroGold 1.5s ease-out forwards; */
+	animation-name: heroGold;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: heroGold;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-fill-mode: forwards;
 }
 
 .hero-green-bg {
 	right: 0;
-	animation: heroGreen 1.5s ease-out forwards;
-	-webkit-animation: heroGreen 1.5s ease-out forwards;
+	/* animation: heroGreen 1.5s ease-out forwards;
+	-webkit-animation: heroGreen 1.5s ease-out forwards; */
+	animation-name: heroGreen;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: heroGreen;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-fill-mode: forwards;
 }
 
 @keyframes heroGold {
@@ -289,16 +305,6 @@ main {
 		opacity: 1;
 		transform: translate(-100%, 0%);
 		-webkit-transform: translate(-100%, 0%);
-	}
-	33% {
-		opacity: 1;
-		transform: translate(0%, 0%);
-		-webkit-transform: translate(0%, 0%);
-	}
-	66% {
-		opacity: 1;
-		transform: translate(100%, 0%);
-		-webkit-transform: translate(100%, 0%);
 	}
 	100% {
 		opacity: 0;
@@ -311,16 +317,6 @@ main {
 	0% {
 		transform: translate(100%, -100%);
 		-webkit-transform: translate(100%, -100%);
-		opacity: 1;
-	}
-	33% {
-		transform: translate(0%, -100%);
-		-webkit-transform: translate(0%, -100%);
-		opacity: 1;
-	}
-	66% {
-		transform: translate(-100%, -100%);
-		-webkit-transform: translate(-100%, -100%);
 		opacity: 1;
 	}
 	100% {
@@ -336,16 +332,6 @@ main {
 		transform: translate(-100%, 0%);
 		-webkit-transform: translate(-100%, 0%);
 	}
-	33% {
-		opacity: 1;
-		transform: translate(0%, 0%);
-		-webkit-transform: translate(0%, 0%);
-	}
-	66% {
-		opacity: 1;
-		transform: translate(100%, 0%);
-		-webkit-transform: translate(100%, 0%);
-	}
 	100% {
 		transform: translate(200%, 0%);
 		-webkit-transform: translate(200%, 0%);
@@ -357,16 +343,6 @@ main {
 	0% {
 		transform: translate(100%, -100%);
 		-webkit-transform: translate(100%, -100%);
-		opacity: 1;
-	}
-	33% {
-		transform: translate(0%, -100%);
-		-webkit-transform: translate(0%, -100%);
-		opacity: 1;
-	}
-	66% {
-		transform: translate(-100%, -100%);
-		-webkit-transform: translate(-100%, -100%);
 		opacity: 1;
 	}
 	100% {

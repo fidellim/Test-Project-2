@@ -124,6 +124,7 @@ header.scrolled {
 	height: calc(100vh - 8rem);
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	padding: 0rem 2rem;
 	border: 7px solid var(--green);

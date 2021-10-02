@@ -274,39 +274,23 @@ main {
 
 .hero-gold-bg {
 	left: 0;
-	/* animation: heroGold 1.5s ease-out forwards;
-	-webkit-animation: heroGold 1.5s ease-out forwards; */
-	animation-name: heroGold;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-	animation-fill-mode: forwards;
-	-webkit-animation-name: heroGold;
-	-webkit-animation-duration: 1.5s;
-	-webkit-animation-timing-function: ease-out;
-	-webkit-animation-fill-mode: forwards;
+	animation: heroGold 1.5s ease-out forwards;
+	-webkit-animation: heroGold 1.5s ease-out forwards;
 }
 
 .hero-green-bg {
 	right: 0;
-	/* animation: heroGreen 1.5s ease-out forwards;
-	-webkit-animation: heroGreen 1.5s ease-out forwards; */
-	animation-name: heroGreen;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-	animation-fill-mode: forwards;
-	-webkit-animation-name: heroGreen;
-	-webkit-animation-duration: 1.5s;
-	-webkit-animation-timing-function: ease-out;
-	-webkit-animation-fill-mode: forwards;
+	animation: heroGreen 1.5s ease-out forwards;
+	-webkit-animation: heroGreen 1.5s ease-out forwards;
 }
 
 @keyframes heroGold {
-	0% {
+	from {
 		opacity: 1;
 		transform: translate(-100%, 0%);
 		-webkit-transform: translate(-100%, 0%);
 	}
-	100% {
+	to {
 		opacity: 0;
 		transform: translate(200%, 0%);
 		-webkit-transform: translate(200%, 0%);
@@ -314,12 +298,12 @@ main {
 }
 
 @keyframes heroGreen {
-	0% {
+	from {
 		transform: translate(100%, -100%);
 		-webkit-transform: translate(100%, -100%);
 		opacity: 1;
 	}
-	100% {
+	to {
 		transform: translate(-200%, -100%);
 		-webkit-transform: translate(-200%, -100%);
 		opacity: 0;
@@ -327,12 +311,12 @@ main {
 }
 
 @-webkit-keyframes heroGold {
-	0% {
+	from {
 		opacity: 1;
 		transform: translate(-100%, 0%);
 		-webkit-transform: translate(-100%, 0%);
 	}
-	100% {
+	to {
 		transform: translate(200%, 0%);
 		-webkit-transform: translate(200%, 0%);
 		opacity: 0;
@@ -340,12 +324,12 @@ main {
 }
 
 @-webkit-keyframes heroGreen {
-	0% {
+	from {
 		transform: translate(100%, -100%);
 		-webkit-transform: translate(100%, -100%);
 		opacity: 1;
 	}
-	100% {
+	to {
 		transform: translate(-200%, -100%);
 		-webkit-transform: translate(-200%, -100%);
 		opacity: 0;

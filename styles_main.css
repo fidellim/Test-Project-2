@@ -103,8 +103,8 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
+	max-width: 2000px;
 	height: 8rem;
-	max-width: 1880px;
 	padding: 0rem 2rem;
 	position: fixed;
 	z-index: 10;

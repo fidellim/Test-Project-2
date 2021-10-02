@@ -46,10 +46,7 @@ window.onscroll = function () {
 };
 
 const scrollFunction = () => {
-	if (
-		document.body.scrollTop > header.clientHeight ||
-		document.documentElement.scrollTop > header.clientHeight
-	) {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 		headerLogo.src = "./images/colored_logo.png";
 		header.classList.add("scrolled");
 	} else {
@@ -62,6 +59,7 @@ const scrollFunction = () => {
 hamburger.addEventListener("click", () => {
 	nav.classList.toggle("cross");
 	navList.classList.toggle("display");
+	container.classList.toggle("nav-open");
 });
 
 // close nav bar once a link is pressed
@@ -69,6 +67,7 @@ navLinks.forEach((navLink) => {
 	navLink.addEventListener("click", () => {
 		nav.classList.toggle("cross");
 		navList.classList.toggle("display");
+		container.classList.toggle("nav-open");
 	});
 });
 

@@ -12,6 +12,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 a {
@@ -57,11 +58,13 @@ body {
 	bottom: 2rem;
 	right: 2rem;
 	transform: scale(0.85);
+	-webkit-transform: scale(0.85);
 	cursor: pointer;
 }
 
 .whatsapp_logo:active {
 	transform: scale(0.83);
+	-webkit-transform: scale(0.83);
 }
 
 button {
@@ -73,6 +76,7 @@ button {
 
 button:active {
 	transform: scale(0.98);
+	-webkit-transform: scale(0.98);
 }
 
 .btn-section {
@@ -87,9 +91,11 @@ button:active {
 	background-color: var(--green);
 }
 
+/* nav button */
 .hamburger {
 	width: 40px;
 	transform: scale(0.75);
+	-webkit-transform: scale(0.75);
 	cursor: pointer;
 }
 
@@ -103,15 +109,26 @@ button:active {
 	border-radius: 3px;
 	margin: 7px 0;
 	transition: 0.5s;
+	-webkit-transition: 0.5s;
 }
+
+header.scrolled .hamburger:before,
+header.scrolled .hamburger:after,
+header.scrolled .hamburger div {
+	background: var(--darkGrayLessOpacity);
+}
+
 .cross .hamburger:before {
 	transform: translateY(12px) rotate(135deg);
+	-webkit-transform: translateY(12px) rotate(135deg);
 }
 .cross .hamburger:after {
 	transform: translateY(-12px) rotate(-135deg);
+	-webkit-transform: translateY(-12px) rotate(-135deg);
 }
 .cross .hamburger div {
 	transform: scale(0);
+	-webkit-transform: scale(0);
 }
 
 @media (min-width: 1400px) {

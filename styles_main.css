@@ -285,12 +285,22 @@ main {
 }
 
 @keyframes heroGold {
-	from {
+	0% {
 		opacity: 1;
 		transform: translate(-100%, 0%);
 		-webkit-transform: translate(-100%, 0%);
 	}
-	to {
+	33% {
+		opacity: 1;
+		transform: translate(0%, 0%);
+		-webkit-transform: translate(0%, 0%);
+	}
+	66% {
+		opacity: 1;
+		transform: translate(100%, 0%);
+		-webkit-transform: translate(100%, 0%);
+	}
+	100% {
 		opacity: 0;
 		transform: translate(200%, 0%);
 		-webkit-transform: translate(200%, 0%);
@@ -298,12 +308,22 @@ main {
 }
 
 @keyframes heroGreen {
-	from {
+	0% {
 		transform: translate(100%, -100%);
 		-webkit-transform: translate(100%, -100%);
 		opacity: 1;
 	}
-	to {
+	33% {
+		transform: translate(0%, -100%);
+		-webkit-transform: translate(0%, -100%);
+		opacity: 1;
+	}
+	66% {
+		transform: translate(-100%, -100%);
+		-webkit-transform: translate(-100%, -100%);
+		opacity: 1;
+	}
+	100% {
 		transform: translate(-200%, -100%);
 		-webkit-transform: translate(-200%, -100%);
 		opacity: 0;
@@ -311,22 +331,46 @@ main {
 }
 
 @-webkit-keyframes heroGold {
-	from {
+	0% {
 		opacity: 1;
+		transform: translate(-100%, 0%);
 		-webkit-transform: translate(-100%, 0%);
 	}
-	to {
+	33% {
+		opacity: 1;
+		transform: translate(0%, 0%);
+		-webkit-transform: translate(0%, 0%);
+	}
+	66% {
+		opacity: 1;
+		transform: translate(100%, 0%);
+		-webkit-transform: translate(100%, 0%);
+	}
+	100% {
+		transform: translate(200%, 0%);
 		-webkit-transform: translate(200%, 0%);
 		opacity: 0;
 	}
 }
 
 @-webkit-keyframes heroGreen {
-	from {
+	0% {
+		transform: translate(100%, -100%);
 		-webkit-transform: translate(100%, -100%);
 		opacity: 1;
 	}
-	to {
+	33% {
+		transform: translate(0%, -100%);
+		-webkit-transform: translate(0%, -100%);
+		opacity: 1;
+	}
+	66% {
+		transform: translate(-100%, -100%);
+		-webkit-transform: translate(-100%, -100%);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-200%, -100%);
 		-webkit-transform: translate(-200%, -100%);
 		opacity: 0;
 	}
